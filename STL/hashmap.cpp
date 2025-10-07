@@ -13,10 +13,10 @@ int main(){
     }
 
     // precompute
-    int hash[13] = {0};
+    map<int, int> mpp;
     for (int i = 0; i < n; i++)
     {
-        hash[arr[i]] += 1;
+        mpp[arr[i]]++;
     }
 
     int q;
@@ -27,7 +27,7 @@ int main(){
        int number;
        cin>>number;
        //fetch
-       cout<< hash[number] << "Frequency of that number" << endl;
+       cout<< mpp[number] << "Frequency of that number" << endl;
     }
     
     return 0;
